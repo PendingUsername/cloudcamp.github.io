@@ -29,4 +29,64 @@ Example:
 
 11. A Bash script is a text file containing a sequence of commands designed to be executed within a Bash shell environment. These scripts are a powerful tool for automating tasks, performing system administration tasks, or simply organizing and executing sets of commands efficiently. Key Elements and Best Practices: Shebang Line: Every Bash script should begin with a shebang line, which specifies the interpreter that should execute the script. In the case of Bash scripts, the shebang line looks like this: #!/bin/bash. This line tells the system to use the Bash shell to interpret the script's commands. Execution Permission: Before you can run a Bash script, you must grant it execution permission. You can use the chmod command to do this. For instance, to give the script full execution permissions for the owner and the owner's group, while restricting others, you can use:chmod 700 Name-Of-File. Alternatively, you can use chmod +x Name-Of-File for a simpler way to grant execution permission. Moving to a Directory in $PATH: To make your Bash scripts easily accessible from any location in the terminal, it is recommended to move them to a directory that is included in the system's $PATH environment variable. Common choices include /usr/local/bin or ~/bin (for user-specific scripts). Here's an example of moving a script to /usr/local/bin: sudo mv Name-Of-File /usr/local/bin/. After moving the script, you can run it from any directory without specifying its full path.
 
-12. Variables: Variables are used to store data within a bash script. This lets you reuse code. Constants do not change where as variables change. Read-only assigns a constant. Bash variables can be called using the '$' sign (hello_world='Hello, world!'echo $hello_world). Readonly varibles remain the same; these will not change. Constants will not change. 
+12. Variables: Variables are used to store data within a bash script. This lets you reuse code. Constants do not change where as variables change. Read-only assigns a constant. Bash variables can be called using the '$' sign (hello_world='Hello, world!'echo $hello_world). Readonly varibles remain the same; these will not change. Constants will not change.
+
+13. Conditional statements: success or failure of a command will trigger an action.
+EXAMPLE:
+#!/bin/bash
+# Prompt the user to enter the first number
+echo "Enter the first number:"
+read num1
+# Prompt the user to enter the second number
+echo "Enter the second number:"
+read num2
+# Calculate the sum
+sum=$((num1 + num2))
+# Display the result
+echo "The sum of $num1 and $num2 is $sum"
+- This script showcases basic user input, variable assignment, arithmetic operations, and output in Bash.
+
+14. Case statements: Allows an action based on the value of a variable or of an expression. 
+    EXAMPLE: #!/bin/bash
+
+# A script that will ask for a number and print out a message depending on the value. 
+
+read -p "Enter a number: " n
+case $n in
+    ???) 
+        echo "One";;
+    2) 
+        echo "Two";;
+    aa) 
+        echo "Three";;
+    *.txt) 
+        echo "Four";;
+    *) 
+        echo "Other";;
+esac
+
+This Bash script prompts the user to input a value, stores it in the variable n, and then uses a "case" statement to check the value of n. Depending on what n contains, it prints out different messages. If n is "???" it prints "One," if it's "2" it prints "Two," if it's "aa" it prints "Three," if it ends with ".txt" (e.g., "myfile.txt") it prints "Four," and for any other input, it prints "Other." This script demonstrates how to make decisions and take different actions based on the value of a variable using the "case" statement in Bash.
+
+15. Functions in Bash: A fucntion is code which can be referenced by its name and is used to break code into mini, reuseable scripts. 
+#!/bin/bash
+
+check_even () {
+    local mod=2
+    echo "The value of mod is $mod"
+    if [ $(("$1" % $mod)) -eq 0 ]
+    then 
+       echo "The number $1 is even!";
+    else 
+       echo "The number $1 is odd!"
+    fi
+}
+
+
+number=2344
+
+check_even $number
+echo $mod
+
+This Bash function named check_even is designed to determine whether a given number is even or odd. It takes one argument, 1, which represents the number to be checked. Inside the function, it calculates the remainder when the input number is divided by 2 and checks if this remainder is equal to 0. If the remainder is 0, it prints "The number is even," otherwise, it prints "The number is odd." However, there is an issue with trying to print the value of the mod variable outside the function, which will result in an error since mod is defined as a local variable within the function and cannot be accessed outside of it.
+
+Loops in Bash: Loops are programming constructs that allow you to repeatedly execute a set of commands or statements as long as a specified condition is met or for a defined number of iterations (i.e. WHILE loop, UNTL loop, FOR loop). 
