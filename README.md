@@ -34,22 +34,22 @@ Example:
 13. Conditional statements: success or failure of a command will trigger an action.
 EXAMPLE:
 #!/bin/bash
-# Prompt the user to enter the first number
+- Prompt the user to enter the first number
 echo "Enter the first number:"
 read num1
-# Prompt the user to enter the second number
+- Prompt the user to enter the second number
 echo "Enter the second number:"
 read num2
-# Calculate the sum
+- Calculate the sum
 sum=$((num1 + num2))
-# Display the result
+- Display the result
 echo "The sum of $num1 and $num2 is $sum"
 - This script showcases basic user input, variable assignment, arithmetic operations, and output in Bash.
 
 14. Case statements: Allows an action based on the value of a variable or of an expression. 
     EXAMPLE: #!/bin/bash
 
-# A script that will ask for a number and print out a message depending on the value. 
+- A script that will ask for a number and print out a message depending on the value. 
 
 read -p "Enter a number: " n
 case $n in
@@ -89,4 +89,95 @@ echo $mod
 
 This Bash function named check_even is designed to determine whether a given number is even or odd. It takes one argument, 1, which represents the number to be checked. Inside the function, it calculates the remainder when the input number is divided by 2 and checks if this remainder is equal to 0. If the remainder is 0, it prints "The number is even," otherwise, it prints "The number is odd." However, there is an issue with trying to print the value of the mod variable outside the function, which will result in an error since mod is defined as a local variable within the function and cannot be accessed outside of it.
 
-Loops in Bash: Loops are programming constructs that allow you to repeatedly execute a set of commands or statements as long as a specified condition is met or for a defined number of iterations (i.e. WHILE loop, UNTL loop, FOR loop). 
+16. Loops in Bash: Loops are programming constructs that allow you to repeatedly execute a set of commands or statements as long as a specified condition is met or for a defined number of iterations (i.e. WHILE loop, UNTL loop, FOR loop). 
+
+WHILE LOOP:
+counter=1
+while [[ "$counter" -le 10 ]]; do
+    echo "The counter is at: $counter"
+    counter=$((counter + 1))
+done
+echo "The count has finished."
+- This script sets a variable called "counter" to 1. It then enters a loop that continues as long as "counter" is less than or equal to 10. Inside the loop, it prints the current value of "counter," increments it by 1, and repeats this process until "counter" reaches 11. After the loop finishes, it prints "The count has finished," indicating that the counting process is complete.
+
+UNTIL LOOP: 
+counter=1
+until [[ "$counter" -gt 10 ]]; do
+    echo "The counter is at: $counter"
+    counter=$((counter + 1))
+done
+echo "The count has finished."
+- In this script, a variable named "counter" is initially set to 1. It enters a loop that continues until "counter" is greater than 10. Inside the loop, it displays the current value of "counter," increases it by 1, and repeats this process until "counter" becomes greater than 10. After the loop concludes, it prints "The count has finished," signifying the end of the counting process.
+
+FOR LOOP, Traditional:
+services=("loadbalancer" "virtualmachine" "storage")
+
+for i in "${services[@]}"
+do
+   echo $i
+done
+- This Bash script defines an array called "services" containing three values: "loadbalancer," "virtualmachine," and "storage." It then uses a "for" loop to iterate through each element in the "services" array. During each iteration, it prints the current element (service) to the console. As a result, it displays each of the three services on separate lines in the terminal.
+
+FOR LOOP: 
+#!/bin/bash
+
+#A script to display a series of numbers using a for loop.
+
+for (( i=0; i<5; i=i+1 )); do
+    echo "The counter is at: $i"
+done
+- This Bash script uses a "for" loop to display a series of numbers. It starts with a variable "i" set to 0 and continues the loop as long as "i" is less than 5. During each iteration, it prints the value of "i" along with the message "The counter is at," incrementing "i" by 1 with each pass. As a result, it displays the numbers 0 through 4, indicating the count from 0 to 4 in the terminal.
+
+LOOP AND BREAK: 
+while true; do
+  read -p "Enter a number between 1 and 25: " n
+  if [[ $n -ge 1 && $n -le 25 ]]; then
+    echo "You entered $n"
+  else 
+    echo "You didn't enter a number in range, goodbye."
+    break
+  fi
+done
+
+echo "Break happened"
+- This Bash script creates an interactive loop that continuously prompts the user to enter a number between 1 and 25. It uses the "read" command to get the input and checks if the entered number falls within the specified range (between 1 and 25). If the number is within the range, it displays the entered number. If not, it informs the user that they didn't enter a number within the range, says goodbye, and exits the loop using "break." Finally, it prints "Break happened" to indicate that the loop was terminated.
+
+17. Writing a Bash Script:
+    #!/bin/bash
+
+#Set your AWS region and resource group name
+AWS_REGION="us-east-1"  # Replace with your desired AWS region
+RESOURCE_GROUP_NAME="MyResourceGroup"  # Replace with your desired resource group name
+
+#Create the resource group
+aws resourcegroupstaggingapi create-resource-group \
+  --region "$AWS_REGION" \
+  --resource-group-name "$RESOURCE_GROUP_NAME"
+
+#Check if the resource group creation was successful
+if [ $? -eq 0 ]; then
+  echo "Resource group '$RESOURCE_GROUP_NAME' created successfully in region '$AWS_REGION'."
+else
+  echo "Failed to create the resource group."
+fi
+- 
+Here's a simple Bash script to create an AWS resource group using the AWS Command Line Interface (CLI). Before running this script, make sure you have the AWS CLI installed and configured with the necessary access credentials.
+
+#!/bin/bash
+
+#Set your AWS region and resource group name
+AWS_REGION="us-east-1"  # Replace with your desired AWS region
+RESOURCE_GROUP_NAME="MyResourceGroup"  # Replace with your desired resource group name
+
+#Create the resource group
+aws resourcegroupstaggingapi create-resource-group \
+  --region "$AWS_REGION" \
+  --resource-group-name "$RESOURCE_GROUP_NAME"
+
+#Check if the resource group creation was successful
+if [ $? -eq 0 ]; then
+  echo "Resource group '$RESOURCE_GROUP_NAME' created successfully in region '$AWS_REGION'."
+else
+  echo "Failed to create the resource group."
+fi
+- This script sets the AWS region and the desired resource group name, and then it uses the AWS CLI to create the resource group. It checks the exit status of the AWS CLI command to determine if the creation was successful and provides appropriate feedback.
