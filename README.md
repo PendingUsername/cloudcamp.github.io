@@ -2,6 +2,7 @@
 Cloud camp projects and documentation blog
 
 # Part 1: Bash
+```bash
 1. What is Bash/Terminal: A terminal is where Bash commands are executed. Bash is a very powerful tool that increases efficiency.
 
 2. Help within Bash: The help and man (manual) commands are useful to understand what each command does (e.g., man cd, cd help, cd --help). Use these commands when needed instead of Googling. Several options are allowed for commands, and these are supported by many Command Line Interfaces (CLIs). The /EXAMPLES section within the manual is also helpful. Use what is useful. To exit, simply type q.
@@ -33,7 +34,6 @@ Example:
 
 13. Conditional statements: success or failure of a command will trigger an action.
 EXAMPLE:
-```bash
 #!/bin/bash
 #Prompt the user to enter the first number
 echo "Enter the first number:"
@@ -44,7 +44,7 @@ read num2
 #Calculate the sum
 sum=$((num1 + num2))
 #Display the result
-echo "The sum of $num1 and $num2 is $sum"```
+echo "The sum of $num1 and $num2 is $sum"
 - This script showcases basic user input, variable assignment, arithmetic operations, and output in Bash.
 
 14. Case statements: Allows an action based on the value of a variable or of an expression. 
