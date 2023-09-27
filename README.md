@@ -142,26 +142,7 @@ done
 echo "Break happened"
 - This Bash script creates an interactive loop that continuously prompts the user to enter a number between 1 and 25. It uses the "read" command to get the input and checks if the entered number falls within the specified range (between 1 and 25). If the number is within the range, it displays the entered number. If not, it informs the user that they didn't enter a number within the range, says goodbye, and exits the loop using "break." Finally, it prints "Break happened" to indicate that the loop was terminated.
 
-17. Writing a Bash Script:
-    #!/bin/bash
-
-#Set your AWS region and resource group name
-AWS_REGION="us-east-1"  # Replace with your desired AWS region
-RESOURCE_GROUP_NAME="MyResourceGroup"  # Replace with your desired resource group name
-
-#Create the resource group
-aws resourcegroupstaggingapi create-resource-group \
-  --region "$AWS_REGION" \
-  --resource-group-name "$RESOURCE_GROUP_NAME"
-
-#Check if the resource group creation was successful
-if [ $? -eq 0 ]; then
-  echo "Resource group '$RESOURCE_GROUP_NAME' created successfully in region '$AWS_REGION'."
-else
-  echo "Failed to create the resource group."
-fi
-- 
-Here's a simple Bash script to create an AWS resource group using the AWS Command Line Interface (CLI). Before running this script, make sure you have the AWS CLI installed and configured with the necessary access credentials.
+17. Writing a Bash Script: Here's a simple Bash script to create an AWS resource group using the AWS Command Line Interface (CLI). Before running this script, make sure you have the AWS CLI installed and configured with the necessary access credentials.
 
 #!/bin/bash
 
