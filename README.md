@@ -33,17 +33,18 @@ Example:
 
 13. Conditional statements: success or failure of a command will trigger an action.
 EXAMPLE:
+```bash
 #!/bin/bash
-- Prompt the user to enter the first number
+#Prompt the user to enter the first number
 echo "Enter the first number:"
 read num1
-- Prompt the user to enter the second number
+#Prompt the user to enter the second number
 echo "Enter the second number:"
 read num2
-- Calculate the sum
+#Calculate the sum
 sum=$((num1 + num2))
-- Display the result
-echo "The sum of $num1 and $num2 is $sum"
+#Display the result
+echo "The sum of $num1 and $num2 is $sum"```
 - This script showcases basic user input, variable assignment, arithmetic operations, and output in Bash.
 
 14. Case statements: Allows an action based on the value of a variable or of an expression. 
@@ -51,7 +52,7 @@ echo "The sum of $num1 and $num2 is $sum"
 
 - A script that will ask for a number and print out a message depending on the value. 
 
-read -p "Enter a number: " n
+```read -p "Enter a number: " n
 case $n in
     ???) 
         echo "One";;
@@ -63,7 +64,7 @@ case $n in
         echo "Four";;
     *) 
         echo "Other";;
-esac
+esac```
 
 This Bash script prompts the user to input a value, stores it in the variable n, and then uses a "case" statement to check the value of n. Depending on what n contains, it prints out different messages. If n is "???" it prints "One," if it's "2" it prints "Two," if it's "aa" it prints "Three," if it ends with ".txt" (e.g., "myfile.txt") it prints "Four," and for any other input, it prints "Other." This script demonstrates how to make decisions and take different actions based on the value of a variable using the "case" statement in Bash.
 
