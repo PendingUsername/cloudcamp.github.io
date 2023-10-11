@@ -164,4 +164,35 @@ fi-
 - This script sets the AWS region and the desired resource group name, and then it uses the AWS CLI to create the resource group. It checks the exit status of the AWS CLI command to determine if the creation was successful and provides appropriate feedback.
 
 # Part 2: Networking
+1. OSI (Open Systems Interconnection Reference) model is an overall guide for data flow, consisting of 7 layers:
 
+Physical
+Data Link
+Network
+Transport
+Session
+Presentation
+Application
+(A helpful mnemonic for remembering these layers is: "All People Seem To Need Data Processing".)
+
+The Physical layer comprises cables and wires. The Data Link layer references MAC addresses and the switching and bridging layer. The Network layer, or routing layer, refers to the Internet Protocol. Fragmentation occurs when data size is larger than the supported size and needs to be split into smaller pieces to be sent through the network (in multiples of 8). It takes many packets to put together a webpage; it is split into smaller pieces and sent across the network using the TCP and UDP protocols.
+
+Layers 5, 6, and 7 deal with how applications handle communication. Many applications handle their own communication processes. All of this happens at Layer 5. Layer 6 deals with character encoding and application encryption. Many applications work at both Layer 6 and Layer 7. Layer 7 is the application layer that the user interacts with.
+
+[Visual Representation]
+
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 7. Application: What the user sees |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 6. Presentation: Application encryption (SSL/TLS) |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 5. Session: Control protocols, tunneling protocols |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 4. Transport: TCP segment, UDP datagram |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 3. Network: IP Address, Router, Packet |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 2. Data Link: Frame, MAC Address, Extended Unique Identifier (EUI-48, EUI-64), Switch |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 1. Physical: Cables, fiber, signal |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
