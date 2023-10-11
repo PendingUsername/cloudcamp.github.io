@@ -179,20 +179,20 @@ The Physical layer comprises cables and wires. The Data Link layer references MA
 
 Layers 5, 6, and 7 deal with how applications handle communication. Many applications handle their own communication processes. All of this happens at Layer 5. Layer 6 deals with character encoding and application encryption. Many applications work at both Layer 6 and Layer 7. Layer 7 is the application layer that the user interacts with.
 
-[Visual Representation]
-
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 | 7. Application: What the user sees |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 | 6. Presentation: Application encryption (SSL/TLS) |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 | 5. Session: Control protocols, tunneling protocols |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 | 4. Transport: TCP segment, UDP datagram |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 | 3. Network: IP Address, Router, Packet |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 | 2. Data Link: Frame, MAC Address, Extended Unique Identifier (EUI-48, EUI-64), Switch |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
 | 1. Physical: Cables, fiber, signal |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+
+Other useful information:
+1. IP adresses: a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. IP addresses serve two primary functions: identifying the host or network interface and providing the location of the host in the network.
+
