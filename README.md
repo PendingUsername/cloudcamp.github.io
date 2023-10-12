@@ -193,6 +193,28 @@ Layers 5, 6, and 7 deal with how applications handle communication. Many applica
 
 | 1. Physical: Cables, fiber, signal |
 
-Other useful information:
-1. IP adresses: a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. IP addresses serve two primary functions: identifying the host or network interface and providing the location of the host in the network.
+2. All about IP:
 
+IP Addresses: IP addresses are numerical labels assigned to each device connected to a computer network that uses the Internet Protocol for communication. They serve two primary functions: identifying the host or network interface and providing the location of the host in the network. Networks operate by the client (Ethernet header) sending information called the payload to the server (Ethernet Trailer). The Ethernet payload typically contains the Internet Protocol (IP) with an IP payload and IP header. Within the IP payload, there can be TCP data and a TCP header. The TCP payload can be separated out into HTTP data.
+
+TCP and UDP: These protocols are transported within the IP packet and are a common way to move data. TCP and UDP operate at OSI layer 4. They offer features that IP does not provide, such as the ability to use many different apps at once, made possible by multiplexing. TCP is connection-oriented (verifiable, reordering messages/re-transmissions, flow control), whereas UDP is connectionless (no formal process, no receipts, no flow control). UDP is suitable for real-time communication and is used by connectionless protocols such as DHCP (Dynamic Host Configuration Protocol) and TFTP (Trivial File Transfer Protocol). Connection-oriented protocols requiring a "return receipt" include HTTPS (Hypertext Transfer Protocol Secure) and SSH (Secure Shell).
+
+Port Numbers: Ports indicate which applications are sending data. They can be encrypted or unencrypted and are typically represented as: -Server IP, protocol, server application port number -Client IP address, protocol, client port number. Port numbers are usually permanent and non-ephemeral (Ports 0 - 1023, e.g., 80 for HTTP, 443 for HTTPS), but they can vary. When communicating with a server, a device will use ports 1024-65535, assigned in real-time by the client. These are temporary ports (ephemeral) determined by the operating system. TCP and UDP can use ports 0 - 65,535. Most servers use non-ephemeral ports, but not always. Port numbers are only for communication, not security. Well-known services use specific port numbers. TCP and UDP have different port numbers (e.g., TCP port 80 and UDP port 80).
+
+3. Routing and Switching:
+
+Routers and Switches: Routers route traffic between IP subnets and are OSI layer 3 devices, whereas switches operate at layer 2. Routers are not primarily designed for security, but some functions such as Access Control Lists (allowing or denying traffic based on source IP, destination IP, port numbers, and rules) do exist. Switches bridge traffic in hardware, using an application-specific integrated circuit. They forward traffic based on MAC addresses/data link addresses. Switches often have many ports for high-bandwidth traffic. Security is commonly handled using Network Access Control, which requires authentication (username and password).
+
+4. MAC Address:
+
+Media Access Control (MAC) Address: The MAC address is a 12-character string that identifies a device to connect to Wi-Fi, Ethernet, or Bluetooth. The first 6 characters represent the block ID unique to the manufacturer, differentiating devices on the same network. DHCP uses the unique MAC address to assign local IPs. MAC addresses only need to be unique on the local area network. Devices on the same network must have unique MAC addresses; otherwise, frames might be shared across devices. MAC addresses should be changed if this situation arises.
+
+OSI Model x
+IP Addresses x
+MAC Addresses x
+Routing and Switching x
+TCP/IP x
+TCP and UDP x
+DNS
+VPN tunneling
+TLS and SSL
