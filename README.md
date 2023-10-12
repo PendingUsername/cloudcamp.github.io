@@ -209,12 +209,24 @@ Routers and Switches: Routers route traffic between IP subnets and are OSI layer
 
 Media Access Control (MAC) Address: The MAC address is a 12-character string that identifies a device to connect to Wi-Fi, Ethernet, or Bluetooth. The first 6 characters represent the block ID unique to the manufacturer, differentiating devices on the same network. DHCP uses the unique MAC address to assign local IPs. MAC addresses only need to be unique on the local area network. Devices on the same network must have unique MAC addresses; otherwise, frames might be shared across devices. MAC addresses should be changed if this situation arises.
 
-OSI Model x
-IP Addresses x
-MAC Addresses x
-Routing and Switching x
-TCP/IP x
-TCP and UDP x
-DNS
-VPN tunneling
-TLS and SSL
+5. DNS (Domain Name System):
+
+The Domain Name System (DNS) translates human-readable domain names into IP addresses. These names are organized in a hierarchical structure and are distributed via databases across numerous DNS servers, including 13 root clusters, top-level domains (TLDs), and country codes. DNS can be either internal, managed and configured by local teams within an organization, or external, managed by third-party providers without internal device information.There are two types of DNS queries: recursive and iterative. Recursive queries involve a DNS server performing the lookup and reporting back, utilizing caching to enhance speed. Iterative queries are manually executed, and the DNS cache is specific to the user. The authority of the DNS server influences the type of information a user receives. Authoritative information comes directly from the DNS, whereas non-authoritative information may be cached data and does not contain zone source files. All DNS responses have a Time to Live (TTL), specifying how long a cache is valid. Lookups can be performed in two ways: forward lookups (providing the DNS server with a Fully Qualified Domain Name) or reverse lookups (providing the DNS server with an IP address). DNS plays a crucial role in translating user-friendly domain names into the numerical IP addresses necessary for internet communication.
+
+6. VPNs
+
+Using a Virtual Private Network (VPN) encrypts data as it travels through a public network. In this process, a concentrator encrypts the data, sends it out, and then decrypts it at the destination. There are various solutions available, which can be hardware-based or software-based.
+On the client side, encryption and decryption of data occur. Individual users can opt for SSL VPN (Secure Sockets Layer, on port 443/tcp). SSL VPNs don’t require specific VPN clients, utilize authentication, and can operate within an operating system or a web browser. Additionally, HTML5 supports the Web Cryptography API, creating a VPN tunnel without the need for a dedicated VPN application. In VPN setups, there are different configurations: 
+Full Tunnels: Encrypt all data entering and leaving the user’s device. Users can't bypass the VPN to send information directly.
+Split Tunnels: Allow more flexibility, permitting tunneled and non-tunneled traffic.
+Site-to-Site VPNs: Encrypt data between concentrators or firewalls. These connections are generally always on. Site-to-site VPNs often use the Layer 2 Tunneling Protocol, which connects over Layer 3 as if they were directly connected at Layer 2. These VPNs generally use IPSec (Internet Protocol Security) for authentication and encryption. IPSec has two major protocols:
+Authentication Header (AH): Provides data integrity by hashing the packet (using SHA-2) and utilizing a shared key.
+Encapsulation Security Payload (ESP): Allows encryption across the IPSec tunnel, adding extra headers and trailers. AH and ESP are commonly combined for both integrity and authentication.
+Data can be sent via IPSec using two modes:
+Transport Mode: Puts the IP header upfront, followed by the IPSec headers, encrypted data, and then the IPSec trailers.
+Tunnel Mode: Encrypts both the IP header and the data and sends it to the concentrator.
+In summary, VPNs, through various configurations and protocols like SSL, IPSec, AH, and ESP, provide secure and encrypted communication channels over public networks.
+
+7. TLS and SSL
+   
+SSL (Secure Sockets Layer) is a technology that secures the connection between a user's web browser and the website they are visiting. It encrypts the data transmitted between the user and the website, making it difficult for unauthorized parties to intercept or tamper with the information. TLS (Transport Layer Security) is an updated and more secure version of SSL. It also encrypts data transmitted over a network, ensuring privacy and data integrity. TLS is the modern and widely used protocol for securing connections on the internet. TLS is often used interchangeably with SSL, though it represents the more recent and improved versions of the encryption technology.
