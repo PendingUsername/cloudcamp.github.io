@@ -230,3 +230,4 @@ In summary, VPNs, through various configurations and protocols like SSL, IPSec, 
 7. TLS and SSL
    
 SSL (Secure Sockets Layer) is a technology that secures the connection between a user's web browser and the website they are visiting. It encrypts the data transmitted between the user and the website, making it difficult for unauthorized parties to intercept or tamper with the information. TLS (Transport Layer Security) is an updated and more secure version of SSL. It also encrypts data transmitted over a network, ensuring privacy and data integrity. TLS is the modern and widely used protocol for securing connections on the internet. TLS is often used interchangeably with SSL, though it represents the more recent and improved versions of the encryption technology.
+
