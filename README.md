@@ -33,8 +33,7 @@ Example:
 
 13. Conditional statements: success or failure of a command will trigger an action.
 EXAMPLE:
-```bash
-#!/bin/bash
+-#!/bin/bash
 #Prompt the user to enter the first number
 echo "Enter the first number:"
 read num1
@@ -44,7 +43,7 @@ read num2
 #Calculate the sum
 sum=$((num1 + num2))
 #Display the result
-echo "The sum of $num1 and $num2 is $sum"```
+echo "The sum of $num1 and $num2 is $sum"-
 - This script showcases basic user input, variable assignment, arithmetic operations, and output in Bash.
 
 14. Case statements: Allows an action based on the value of a variable or of an expression. 
@@ -52,7 +51,7 @@ echo "The sum of $num1 and $num2 is $sum"```
 
 - A script that will ask for a number and print out a message depending on the value. 
 
-```read -p "Enter a number: " n
+-read -p "Enter a number: " n
 case $n in
     ???) 
         echo "One";;
@@ -64,12 +63,12 @@ case $n in
         echo "Four";;
     *) 
         echo "Other";;
-esac```
+esac-
 
 This Bash script prompts the user to input a value, stores it in the variable n, and then uses a "case" statement to check the value of n. Depending on what n contains, it prints out different messages. If n is "???" it prints "One," if it's "2" it prints "Two," if it's "aa" it prints "Three," if it ends with ".txt" (e.g., "myfile.txt") it prints "Four," and for any other input, it prints "Other." This script demonstrates how to make decisions and take different actions based on the value of a variable using the "case" statement in Bash.
 
 15. Functions in Bash: A fucntion is code which can be referenced by its name and is used to break code into mini, reuseable scripts. 
-#!/bin/bash
+-#!/bin/bash
 
 check_even () {
     local mod=2
@@ -86,51 +85,51 @@ check_even () {
 number=2344
 
 check_even $number
-echo $mod
+echo $mod-
 
 This Bash function named check_even is designed to determine whether a given number is even or odd. It takes one argument, 1, which represents the number to be checked. Inside the function, it calculates the remainder when the input number is divided by 2 and checks if this remainder is equal to 0. If the remainder is 0, it prints "The number is even," otherwise, it prints "The number is odd." However, there is an issue with trying to print the value of the mod variable outside the function, which will result in an error since mod is defined as a local variable within the function and cannot be accessed outside of it.
 
 16. Loops in Bash: Loops are programming constructs that allow you to repeatedly execute a set of commands or statements as long as a specified condition is met or for a defined number of iterations (i.e. WHILE loop, UNTL loop, FOR loop). 
 
 WHILE LOOP:
-counter=1
+-counter=1
 while [[ "$counter" -le 10 ]]; do
     echo "The counter is at: $counter"
     counter=$((counter + 1))
 done
-echo "The count has finished."
+echo "The count has finished."-
 - This script sets a variable called "counter" to 1. It then enters a loop that continues as long as "counter" is less than or equal to 10. Inside the loop, it prints the current value of "counter," increments it by 1, and repeats this process until "counter" reaches 11. After the loop finishes, it prints "The count has finished," indicating that the counting process is complete.
 
 UNTIL LOOP: 
-counter=1
+-counter=1
 until [[ "$counter" -gt 10 ]]; do
     echo "The counter is at: $counter"
     counter=$((counter + 1))
 done
-echo "The count has finished."
+echo "The count has finished."-
 - In this script, a variable named "counter" is initially set to 1. It enters a loop that continues until "counter" is greater than 10. Inside the loop, it displays the current value of "counter," increases it by 1, and repeats this process until "counter" becomes greater than 10. After the loop concludes, it prints "The count has finished," signifying the end of the counting process.
 
 FOR LOOP, Traditional:
-services=("loadbalancer" "virtualmachine" "storage")
+-services=("loadbalancer" "virtualmachine" "storage")
 
 for i in "${services[@]}"
 do
    echo $i
-done
+done-
 - This Bash script defines an array called "services" containing three values: "loadbalancer," "virtualmachine," and "storage." It then uses a "for" loop to iterate through each element in the "services" array. During each iteration, it prints the current element (service) to the console. As a result, it displays each of the three services on separate lines in the terminal.
 
 FOR LOOP: 
-#!/bin/bash
+-#!/bin/bash
 
 #A script to display a series of numbers using a for loop.
 
 for (( i=0; i<5; i=i+1 )); do
     echo "The counter is at: $i"
-done
+done-
 - This Bash script uses a "for" loop to display a series of numbers. It starts with a variable "i" set to 0 and continues the loop as long as "i" is less than 5. During each iteration, it prints the value of "i" along with the message "The counter is at," incrementing "i" by 1 with each pass. As a result, it displays the numbers 0 through 4, indicating the count from 0 to 4 in the terminal.
 
 LOOP AND BREAK: 
-while true; do
+-while true; do
   read -p "Enter a number between 1 and 25: " n
   if [[ $n -ge 1 && $n -le 25 ]]; then
     echo "You entered $n"
@@ -140,12 +139,12 @@ while true; do
   fi
 done
 
-echo "Break happened"
+echo "Break happened"-
 - This Bash script creates an interactive loop that continuously prompts the user to enter a number between 1 and 25. It uses the "read" command to get the input and checks if the entered number falls within the specified range (between 1 and 25). If the number is within the range, it displays the entered number. If not, it informs the user that they didn't enter a number within the range, says goodbye, and exits the loop using "break." Finally, it prints "Break happened" to indicate that the loop was terminated.
 
 17. Writing a Bash Script: Here's a simple Bash script to create an AWS resource group using the AWS Command Line Interface (CLI). Before running this script, make sure you have the AWS CLI installed and configured with the necessary access credentials.
 
-#!/bin/bash
+-#!/bin/bash
 
 #Set your AWS region and resource group name
 AWS_REGION="us-east-1"  # Replace with your desired AWS region
@@ -161,5 +160,75 @@ if [ $? -eq 0 ]; then
   echo "Resource group '$RESOURCE_GROUP_NAME' created successfully in region '$AWS_REGION'."
 else
   echo "Failed to create the resource group."
-fi
+fi-
 - This script sets the AWS region and the desired resource group name, and then it uses the AWS CLI to create the resource group. It checks the exit status of the AWS CLI command to determine if the creation was successful and provides appropriate feedback.
+
+# Part 2: Networking
+1. OSI (Open Systems Interconnection Reference) model is an overall guide for data flow, consisting of 7 layers:
+
+Physical
+Data Link
+Network
+Transport
+Session
+Presentation
+Application
+(A helpful mnemonic for remembering these layers is: "All People Seem To Need Data Processing".)
+
+The Physical layer comprises cables and wires. The Data Link layer references MAC addresses and the switching and bridging layer. The Network layer, or routing layer, refers to the Internet Protocol. Fragmentation occurs when data size is larger than the supported size and needs to be split into smaller pieces to be sent through the network (in multiples of 8). It takes many packets to put together a webpage; it is split into smaller pieces and sent across the network using the TCP and UDP protocols.
+
+Layers 5, 6, and 7 deal with how applications handle communication. Many applications handle their own communication processes. All of this happens at Layer 5. Layer 6 deals with character encoding and application encryption. Many applications work at both Layer 6 and Layer 7. Layer 7 is the application layer that the user interacts with.
+
+| 7. Application: What the user sees |
+
+| 6. Presentation: Application encryption (SSL/TLS) |
+
+| 5. Session: Control protocols, tunneling protocols |
+
+| 4. Transport: TCP segment, UDP datagram |
+
+| 3. Network: IP Address, Router, Packet |
+
+| 2. Data Link: Frame, MAC Address, Extended Unique Identifier (EUI-48, EUI-64), Switch |
+
+| 1. Physical: Cables, fiber, signal |
+
+2. All about IP:
+
+IP Addresses: IP addresses are numerical labels assigned to each device connected to a computer network that uses the Internet Protocol for communication. They serve two primary functions: identifying the host or network interface and providing the location of the host in the network. Networks operate by the client (Ethernet header) sending information called the payload to the server (Ethernet Trailer). The Ethernet payload typically contains the Internet Protocol (IP) with an IP payload and IP header. Within the IP payload, there can be TCP data and a TCP header. The TCP payload can be separated out into HTTP data.
+
+TCP and UDP: These protocols are transported within the IP packet and are a common way to move data. TCP and UDP operate at OSI layer 4. They offer features that IP does not provide, such as the ability to use many different apps at once, made possible by multiplexing. TCP is connection-oriented (verifiable, reordering messages/re-transmissions, flow control), whereas UDP is connectionless (no formal process, no receipts, no flow control). UDP is suitable for real-time communication and is used by connectionless protocols such as DHCP (Dynamic Host Configuration Protocol) and TFTP (Trivial File Transfer Protocol). Connection-oriented protocols requiring a "return receipt" include HTTPS (Hypertext Transfer Protocol Secure) and SSH (Secure Shell).
+
+Port Numbers: Ports indicate which applications are sending data. They can be encrypted or unencrypted and are typically represented as: -Server IP, protocol, server application port number -Client IP address, protocol, client port number. Port numbers are usually permanent and non-ephemeral (Ports 0 - 1023, e.g., 80 for HTTP, 443 for HTTPS), but they can vary. When communicating with a server, a device will use ports 1024-65535, assigned in real-time by the client. These are temporary ports (ephemeral) determined by the operating system. TCP and UDP can use ports 0 - 65,535. Most servers use non-ephemeral ports, but not always. Port numbers are only for communication, not security. Well-known services use specific port numbers. TCP and UDP have different port numbers (e.g., TCP port 80 and UDP port 80).
+
+3. Routing and Switching:
+
+Routers and Switches: Routers route traffic between IP subnets and are OSI layer 3 devices, whereas switches operate at layer 2. Routers are not primarily designed for security, but some functions such as Access Control Lists (allowing or denying traffic based on source IP, destination IP, port numbers, and rules) do exist. Switches bridge traffic in hardware, using an application-specific integrated circuit. They forward traffic based on MAC addresses/data link addresses. Switches often have many ports for high-bandwidth traffic. Security is commonly handled using Network Access Control, which requires authentication (username and password).
+
+4. MAC Address:
+
+Media Access Control (MAC) Address: The MAC address is a 12-character string that identifies a device to connect to Wi-Fi, Ethernet, or Bluetooth. The first 6 characters represent the block ID unique to the manufacturer, differentiating devices on the same network. DHCP uses the unique MAC address to assign local IPs. MAC addresses only need to be unique on the local area network. Devices on the same network must have unique MAC addresses; otherwise, frames might be shared across devices. MAC addresses should be changed if this situation arises.
+
+5. DNS (Domain Name System):
+
+The Domain Name System (DNS) translates human-readable domain names into IP addresses. These names are organized in a hierarchical structure and are distributed via databases across numerous DNS servers, including 13 root clusters, top-level domains (TLDs), and country codes. DNS can be either internal, managed and configured by local teams within an organization, or external, managed by third-party providers without internal device information.There are two types of DNS queries: recursive and iterative. Recursive queries involve a DNS server performing the lookup and reporting back, utilizing caching to enhance speed. Iterative queries are manually executed, and the DNS cache is specific to the user. The authority of the DNS server influences the type of information a user receives. Authoritative information comes directly from the DNS, whereas non-authoritative information may be cached data and does not contain zone source files. All DNS responses have a Time to Live (TTL), specifying how long a cache is valid. Lookups can be performed in two ways: forward lookups (providing the DNS server with a Fully Qualified Domain Name) or reverse lookups (providing the DNS server with an IP address). DNS plays a crucial role in translating user-friendly domain names into the numerical IP addresses necessary for internet communication.
+
+6. VPNs
+
+Using a Virtual Private Network (VPN) encrypts data as it travels through a public network. In this process, a concentrator encrypts the data, sends it out, and then decrypts it at the destination. There are various solutions available, which can be hardware-based or software-based.
+On the client side, encryption and decryption of data occur. Individual users can opt for SSL VPN (Secure Sockets Layer, on port 443/tcp). SSL VPNs don’t require specific VPN clients, utilize authentication, and can operate within an operating system or a web browser. Additionally, HTML5 supports the Web Cryptography API, creating a VPN tunnel without the need for a dedicated VPN application. In VPN setups, there are different configurations: 
+Full Tunnels: Encrypt all data entering and leaving the user’s device. Users can't bypass the VPN to send information directly.
+Split Tunnels: Allow more flexibility, permitting tunneled and non-tunneled traffic.
+Site-to-Site VPNs: Encrypt data between concentrators or firewalls. These connections are generally always on. Site-to-site VPNs often use the Layer 2 Tunneling Protocol, which connects over Layer 3 as if they were directly connected at Layer 2. These VPNs generally use IPSec (Internet Protocol Security) for authentication and encryption. IPSec has two major protocols:
+Authentication Header (AH): Provides data integrity by hashing the packet (using SHA-2) and utilizing a shared key.
+Encapsulation Security Payload (ESP): Allows encryption across the IPSec tunnel, adding extra headers and trailers. AH and ESP are commonly combined for both integrity and authentication.
+Data can be sent via IPSec using two modes:
+Transport Mode: Puts the IP header upfront, followed by the IPSec headers, encrypted data, and then the IPSec trailers.
+Tunnel Mode: Encrypts both the IP header and the data and sends it to the concentrator.
+In summary, VPNs, through various configurations and protocols like SSL, IPSec, AH, and ESP, provide secure and encrypted communication channels over public networks.
+
+7. TLS and SSL
+   
+SSL (Secure Sockets Layer) is a technology that secures the connection between a user's web browser and the website they are visiting. It encrypts the data transmitted between the user and the website, making it difficult for unauthorized parties to intercept or tamper with the information. TLS (Transport Layer Security) is an updated and more secure version of SSL. It also encrypts data transmitted over a network, ensuring privacy and data integrity. TLS is the modern and widely used protocol for securing connections on the internet. TLS is often used interchangeably with SSL, though it represents the more recent and improved versions of the encryption technology.
+
+![Two-Tier Architecture](cloudcamp.github.io/Two-Tier Architecture.png)
