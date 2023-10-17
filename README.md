@@ -233,4 +233,4 @@ SSL (Secure Sockets Layer) is a technology that secures the connection between a
 
 Examples of AWS Netowrk Architecture:
 
-![Two-Tier Architecture](/workspaces/cloudcamp.github.io/images/Two_Tier.png)
+![Two-Tier Architecture](cloudcamp.github.io/images/Two_Tier.png)
