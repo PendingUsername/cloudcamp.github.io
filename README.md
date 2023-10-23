@@ -236,3 +236,26 @@ SSL (Secure Sockets Layer) is a technology that secures the connection between a
 ![Two-Tier Architecture](images/Two_Tier.png)
 ![Three-Tier Architecture](images/Three_Tier.png)
 
+# Part 2: Python
+
+1. What is python
+
+Python, created by Guido van Rossum in the late 1980s, is a high-level, interpreted, and dynamic programming language widely employed in diverse applications such as web development,        devops, data analysis, artificial intelligence, and machine learning.
+
+Python is available for download on various platforms, including Windows, Mac, and Linux. You can download it from the official website. After installation, configure your environment using Integrated Development Environments. 
+
+Python supports essential data types:
+-Numbers: integers, floating-point numbers, and complex numbers
+-Strings: character sequences
+-Lists: ordered groups of elements
+-Tuples: ordered immutable collections
+-Dictionaries: unordered collections of key-value pairs
+
+Perform various operations, including arithmetic, comparison, and logical operations, using Python's data types. Variables are dynamically typed, determined by the data assigned. For example: a = 1 # a is assigned the value of 1
+         b = x +1 # b is the value of a plus 1
+         c = b # c is assigned the value of b
+String can be concatenated using the '+' operator: x = 'I am' + ' ' + 'Bob'
+print(x)  # outputs: I am Bob
+
+
+
