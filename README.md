@@ -332,5 +332,75 @@ try:
     print("Result:", result)  # This line won't be executed if an exception occurs
 except ZeroDivisionError:
     print("Error: Division by zero!")
+```
+3. Data Structures and OOP
 
+    Regarding Data Structures, Python offers diverse options: Lists allow storage of multiple items and are mutable; Tuples are similar but immutable; Dictionaries store key-value pairs; and Sets are used for mathematical operations. In OOP, understanding a Class is pivotal, acting as a template for objects, defining attributes and methods. Inheritance enables the creation of subclasses inheriting properties from superclasses. Polymorphism facilitates objects taking different forms; a method can behave differently based on the context, achieved through method overriding and inheritance. These concepts provide a strong foundation for Python programming, enabling the creation of sophisticated and structured applications.
 
+-LISTS
+```#Define a list of cars with their attributes
+cars = [
+    {"make": "Toyota", "model": "Camry", "year": 2020, "color": "Silver"},
+    {"make": "Honda", "model": "Civic", "year": 2019, "color": "Blue"},
+    {"make": "Ford", "model": "Mustang", "year": 2021, "color": "Red"},
+    {"make": "Chevrolet", "model": "Malibu", "year": 2018, "color": "Black"}
+]
+
+-Print information about each car in the list
+for car in cars:
+    print(f"Make: {car['make']}, Model: {car['model']}, Year: {car['year']}, Color: {car['color']}")
+
+-Add a new car to the list
+new_car = {"make": "Tesla", "model": "Model S", "year": 2022, "color": "White"}
+cars.append(new_car)
+
+-Print the updated list of cars
+print("\nUpdated List of Cars:")
+for car in cars:
+    print(f"Make: {car['make']}, Model: {car['model']}, Year: {car['year']}, Color: {car['color']}")
+```
+-TUPLE:
+```# Define a tuple representing car information
+car_info = ("Toyota", "Camry", 2020, "Silver")
+
+# Access and print elements of the tuple
+print("Make:", car_info[0])    # Output: Toyota
+print("Model:", car_info[1])   # Output: Camry
+print("Year:", car_info[2])    # Output: 2020
+print("Color:", car_info[3])   # Output: Silver
+```
+-Dictionary:
+```# Define a dictionary representing car information
+car = {
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2020,
+    "color": "Silver"
+}
+
+# Access and print elements of the dictionary
+print("Make:", car["make"])    # Output: Toyota
+print("Model:", car["model"])  # Output: Camry
+print("Year:", car["year"])    # Output: 2020
+print("Color:", car["color"])  # Output: Silver
+```
+-SETS:
+```# Define sets representing car colors
+car_colors1 = {"Red", "Blue", "Green"}
+car_colors2 = {"Blue", "Black", "White"}
+
+# Find common colors using intersection
+common_colors = car_colors1.intersection(car_colors2)
+print("Common Car Colors:", common_colors)  # Output: {'Blue'}
+
+# Find all unique colors using union
+all_colors = car_colors1.union(car_colors2)
+print("All Car Colors:", all_colors)  # Output: {'Red', 'Black', 'Green', 'White', 'Blue'}
+
+# Find exclusive colors using difference
+exclusive_colors = car_colors1.difference(car_colors2)
+print("Exclusive Car Colors in Set 1:", exclusive_colors)  # Output: {'Red', 'Green'}
+
+exclusive_colors = car_colors2.difference(car_colors1)
+print("Exclusive Car Colors in Set 2:", exclusive_colors)  # Output: {'Black', 'White'}
+```
