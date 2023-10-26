@@ -264,24 +264,24 @@ SSL (Secure Sockets Layer) is a technology that secures the connection between a
 Loops, such as 'for' and 'while', enable repetitive code execution. For instance, a 'for' loop iterates through elements in a list like ′Python′,′Go′,′JavaScript′′Python′,′Go′,′JavaScript′, printing each language. Functions, defined with 'def', facilitate code reuse. For instance, a function 'add_numbers' takes two arguments, adds them, and prints the sum. Modules organize code, with 'math' being an example. It calculates the square root of 16 using the 'sqrt()' function. File I/O allows reading and writing data to files; the 'open()' function reads from a file and prints its content. Exception handling using 'try/except' blocks manages errors; attempting to write to a file without proper permissions triggers an exception. These concepts form the foundational knowledge for Python programming, showcasing the language's versatility and practicality.
 
 FOR LOOP:
--Define a list of numbers
+```-Define a list of numbers
 numbers = [1, 2, 3, 4, 5]
 
 -Iterate through the list using a for loop
 for number in numbers:
-    print(number)
+    print(number)```
     
 WHILE LOOP:
--Initialize a variable
+```-Initialize a variable
 count = 1
 
 -Use a while loop to print numbers from 1 to 5
 while count <= 5:
     print(count)
-    count += 1
+    count += 1```
 
 FUNCTION
--Define a function named 'add_numbers' that takes two parameters 'num1' and 'num2'
+```-Define a function named 'add_numbers' that takes two parameters 'num1' and 'num2'
 def add_numbers(num1, num2):
     # Calculate the sum of num1 and num2
     sum = num1 + num2
@@ -290,10 +290,10 @@ def add_numbers(num1, num2):
 
 -Call the function with arguments 5 and 3 and print the result
 result = add_numbers(5, 3)
-print("The sum is:", result)
+print("The sum is:", result)```
 
 MODULE:
--Import the math module
+```-Import the math module
 import math
 
 -Calculate the square root of a number
@@ -301,10 +301,10 @@ number = 16
 square_root = math.sqrt(number)
 
 -Print the square root
-print("The square root of", number, "is:", square_root)
+print("The square root of", number, "is:", square_root)```
 
 FILE I/O:
--Open a file named "example.txt" in write mode
+```-Open a file named "example.txt" in write mode
 file = open("example.txt", "w")
 
 -Write data to the file
@@ -323,14 +323,14 @@ print("File Content:")
 print(file_content)
 
 -Close the file after reading
-file.close()
+file.close()```
 
 EXCEPTION HANDLING:
--Attempt to perform a division by zero
+```-Attempt to perform a division by zero
 try:
     result = 10 / 0
     print("Result:", result)  # This line won't be executed if an exception occurs
 except ZeroDivisionError:
-    print("Error: Division by zero!")
+    print("Error: Division by zero!")```
 
 
