@@ -32,7 +32,7 @@ Example:
 12. Variables: Variables are used to store data within a bash script. This lets you reuse code. Constants do not change where as variables change. Read-only assigns a constant. Bash variables can be called using the '$' sign (hello_world='Hello, world!'echo $hello_world). Readonly varibles remain the same; these will not change. Constants will not change.
 
 13. Conditional statements: success or failure of a command will trigger an action.
-EXAMPLE:
+```EXAMPLE:
 -#!/bin/bash
 #Prompt the user to enter the first number
 echo "Enter the first number:"
