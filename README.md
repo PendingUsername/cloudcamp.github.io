@@ -161,7 +161,7 @@ if [ $? -eq 0 ]; then
 else
   echo "Failed to create the resource group."
 fi-
-- This script sets the AWS region and the desired resource group name, and then it uses the AWS CLI to create the resource group. It checks the exit status of the AWS CLI command to determine if the creation was successful and provides appropriate feedback.
+- This script sets the AWS region and the desired resource group name, and then it uses the AWS CLI to create the resource group. It checks the exit status of the AWS CLI command to determine if the creation was successful and provides appropriate feedback.```
 
 # Part 2: Networking
 1. OSI (Open Systems Interconnection Reference) model is an overall guide for data flow, consisting of 7 layers:
