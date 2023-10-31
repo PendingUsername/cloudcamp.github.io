@@ -404,3 +404,281 @@ print("Exclusive Car Colors in Set 1:", exclusive_colors)  # Output: {'Red', 'Gr
 exclusive_colors = car_colors2.difference(car_colors1)
 print("Exclusive Car Colors in Set 2:", exclusive_colors)  # Output: {'Black', 'White'}
 ```
+Object-Oriented Programming (OOP) in Python is a programming approach that uses objects (instances of classes) to structure and manipulate data. It organizes code into reusable, modular units, enhancing efficiency and readability. OOP principles include encapsulation, inheritance, and polymorphism, providing a clear and intuitive way to model real-world entities and relationships.
+
+-CLASS
+```# Define a Car class
+class Car:
+    # Constructor method to initialize car attributes
+    def __init__(self, make, model, year, color):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.color = color
+
+    # Method to display car information
+    def display_info(self):
+        print(f"Car Make: {self.make}")
+        print(f"Car Model: {self.model}")
+        print(f"Car Year: {self.year}")
+        print(f"Car Color: {self.color}")
+
+# Create instances of the Car class
+car1 = Car("Toyota", "Camry", 2020, "Silver")
+car2 = Car("Honda", "Civic", 2019, "Blue")
+
+# Display information about the cars
+print("Car 1:")
+car1.display_info()
+print("\nCar 2:")
+car2.display_info()
+```
+-INHERITANCE 
+```# Parent class: Vehicle
+class Vehicle:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def display_info(self):
+        print(f"Vehicle Make: {self.make}")
+        print(f"Vehicle Model: {self.model}")
+
+# Child class: Car (inherits from Vehicle)
+class Car(Vehicle):
+    def __init__(self, make, model, year, color):
+        # Call the constructor of the parent class using super()
+        super().__init__(make, model)
+        self.year = year
+        self.color = color
+
+    # Override the display_info method from the parent class
+    def display_info(self):
+        # Call the display_info method of the parent class
+        super().display_info()
+        print(f"Car Year: {self.year}")
+        print(f"Car Color: {self.color}")
+
+# Create an instance of the Car class
+car = Car("Toyota", "Camry", 2020, "Silver")
+
+# Display information about the car using the overridden display_info method
+car.display_info()
+
+-Polymorphism
+```# Parent class: Vehicle
+class Vehicle:
+    def display_info(self):
+        print("Generic Vehicle Information")
+
+# Child class 1: Car (inherits from Vehicle)
+class Car(Vehicle):
+    def display_info(self):
+        print("Car Information")
+
+# Child class 2: Motorcycle (inherits from Vehicle)
+class Motorcycle(Vehicle):
+    def display_info(self):
+        print("Motorcycle Information")
+
+# Create instances of different classes
+vehicle = Vehicle()
+car = Car()
+motorcycle = Motorcycle()
+
+# Demonstrate polymorphism by calling the display_info method
+vehicle.display_info()    # Output: Generic Vehicle Information
+car.display_info()        # Output: Car Information
+motorcycle.display_info() # Output: Motorcycle Information
+
+4. Debugging, testing and Regular expression
+
+Debugging in Python refers to the process of identifying and fixing errors, or bugs, in the code to ensure it runs correctly. It involves tracing and resolving issues like syntax errors, logical flaws, or runtime exceptions, improving code reliability. Testing, on the other hand, involves systematically validating individual units or the entire codebase using tools like unittest or pytest, ensuring that the code meets its specifications and functions as expected in various scenarios, enhancing the overall software quality and user experience.
+
+-Debugging
+```# Define a Car class
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def display_info(self):
+        print(f"Car Make: {self.make}")
+        print(f"Car Model: {self.model}")
+
+# Function that uses the Car class and starts the debugger
+def create_and_display_car(make, model):
+    car = Car(make, model)
+    breakpoint()  # Start the debugger at this point in the code
+    car.display_info()
+
+# Call the function with car information
+create_and_display_car("Toyota", "Camry")
+```
+-Testing
+```import unittest
+
+# Define the Car class
+class Car:
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+
+    def display_info(self):
+        return f"Car Make: {self.make}, Car Model: {self.model}"
+
+# Define a test case for the Car class
+class TestCar(unittest.TestCase):
+    def test_car_display_info(self):
+        # Create a Car object
+        car = Car("Toyota", "Camry")
+        # Check if display_info method returns the correct result
+        self.assertEqual(car.display_info(), "Car Make: Toyota, Car Model: Camry")
+
+# Run the tests
+if __name__ == "__main__":
+    unittest.main()
+```
+-Regular expressions
+```import re
+
+# Sample text containing car information
+text = "I own a Toyota Camry and a Honda Civic. My friend drives a Ford Mustang."
+
+# Regular expression pattern to match car makes and models
+pattern = r"\b([A-Z][a-z]+)\s([A-Z][a-z]+)\b"
+
+# Find all matches using re.findall
+car_matches = re.findall(pattern, text)
+
+# Output the matched car makes and models
+for make, model in car_matches:
+    print(f"Car Make: {make}, Car Model: {model}")
+```
+-DATETIME LIBRARY:
+```from datetime import datetime, timedelta
+
+# Define a CarRental class
+class CarRental:
+    def __init__(self, car, rental_start_date, rental_duration_days):
+        self.car = car
+        self.rental_start_date = rental_start_date
+        self.rental_duration_days = rental_duration_days
+
+    def calculate_due_date(self):
+        rental_end_date = self.rental_start_date + timedelta(days=self.rental_duration_days)
+        return rental_end_date
+
+# Example usage of the CarRental class with datetime
+car_info = "Toyota Camry"
+rental_start_date = datetime(2023, 11, 1)  # Rental start date: November 1, 2023
+rental_duration_days = 7  # Rental duration: 7 days
+
+# Create a CarRental object
+car_rental = CarRental(car_info, rental_start_date, rental_duration_days)
+
+# Calculate and display due date
+due_date = car_rental.calculate_due_date()
+print(f"Car: {car_rental.car}")
+print(f"Rental Start Date: {car_rental.rental_start_date.strftime('%Y-%m-%d')}")
+print(f"Rental Duration: {car_rental.rental_duration_days} days")
+print(f"Due Date: {due_date.strftime('%Y-%m-%d')}")
+```
+5. Web development
+
+Python web development uses frameworks like Django, Flask, or FastAPI to build websites and applications. These tools simplify tasks such as routing, templates, and databases. Django provides a comprehensive experience with an ORM and authentication, while Flask offers flexibility, allowing developers to choose components. FastAPI, based on Python type hints, specializes in fast API development. Python's simplicity and versatility make it a popular choice for varied web projects, from basic websites to complex applications and APIs.
+
+-FLASK
+```from flask import Flask
+
+# Create a Flask application
+app = Flask(__name__)
+
+# Define a route and corresponding view function
+@app.route('/')
+def hello():
+    return 'Hello, World! This is a basic Flask web application.'
+
+# Run the Flask application
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+-DATABASE
+```from django.shortcuts import render
+from django.db import models
+from django.conf import settings
+from django.urls import path
+from django.http import HttpResponse
+from django.apps import apps
+
+# Django settings configuration
+settings.configure(
+    DEBUG=True,
+    DATABASES={
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'test.db',
+        }
+    },
+    INSTALLED_APPS=['django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'myapp']
+)
+
+# Django model representing a User
+class User(models.Model):
+    name = models.CharField(max_length=50)
+
+# Django view function for the index page
+def index(request):
+    users = User.objects.all()
+    return render(request, 'index.html', {'users': users})
+
+# Django URL configuration
+urlpatterns = [
+    path('', index, name='index'),
+]
+
+# Run Django development server
+if __name__ == '__main__':
+    from django.core.management import execute_from_command_line
+    execute_from_command_line(['myscript.py', 'runserver'])
+```
+6. Automation with Python
+
+Automation in Python refers to using Python scripts to perform repetitive tasks automatically, such as data processing, file management, and web scraping. Python's simplicity and rich libraries make it ideal for creating efficient and customized automation solutions, reducing manual effort and increasing productivity across various domains.
+
+-FABRIC
+```from fabric import Connection
+
+# Define the host and user credentials
+host = 'your_remote_server_ip'
+user = 'your_username'
+password = 'your_password'
+
+# Task to print system uptime
+def uptime_task(c):
+    result = c.run('uptime', hide=True)
+    print(f'System Uptime: {result.stdout.strip()}')
+
+# Connect to the remote server and run the task
+with Connection(host=host, user=user, connect_kwargs={'password': password}) as connection:
+    uptime_task(connection)
+```
+-PULUMI
+
+```import pulumi
+import pulumi_aws as aws
+
+# Define the AWS region
+aws_region = "us-west-2"
+
+# Create an AWS S3 bucket
+bucket = aws.s3.Bucket(
+    "my-bucket",
+    acl="private",  # Set access control to private
+    region=aws_region
+)
+
+# Export the bucket name for reference
+pulumi.export("bucket_name", bucket.bucket)
+```
+
