@@ -681,4 +681,6 @@ bucket = aws.s3.Bucket(
 # Export the bucket name for reference
 pulumi.export("bucket_name", bucket.bucket)
 ```
+7. Python app
 
+Python + Flask deploy to Amazon Web Services Elastic Beanstalk (CI/CD with Git, CodePipeline). This is a simple HTML/CSS and Python code for an online calculator that performs arithmetic operations based on user input. [Calculator App](http://ebs-calc-env.eba-cgzn9wga.us-east-1.elasticbeanstalk.com/)
