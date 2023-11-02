@@ -688,8 +688,9 @@ Python + Flask deploy to Amazon Web Services Elastic Beanstalk (CI/CD with Git, 
 8. Using Git and GitHub
 
  What is Git and Github?
-    Git is a distributed version control system that tracks changes in source code during software development. It allows multiple developers to collaborate on projects, managing and tracking changes efficiently.
+    ```Git is a distributed version control system that tracks changes in source code during software development. It allows multiple developers to collaborate on projects, managing and tracking changes efficiently.
     GitHub is a web-based hosting service for Git repositories. It provides a platform for version control, collaboration, and code management. GitHub enhances Git by adding features like pull requests, issue tracking, and          project management tools.
+    ```
  Why Git and Github?
     Git and GitHub are used for version control, enabling developers to collaborate, track changes, and manage codebases effectively.
     They ensure a backup of the code, enable parallel development through branches, and facilitate collaborative coding, making it easier to identify and resolve issues.
