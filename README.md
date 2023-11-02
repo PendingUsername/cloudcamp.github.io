@@ -900,3 +900,9 @@ Merge conflicts and how to resolve them?
     After resolving conflicts, remember to commit the changes.
 
 These step-by-step instructions provide a comprehensive overview of key Git and GitHub concepts, ensuring a solid understanding of version control, collaboration, and best practices for managing software development projects.
+
+9. Prompt engineering and Github Copilot
+
+  Prompt engineering:
+
+  Github Copilot:
