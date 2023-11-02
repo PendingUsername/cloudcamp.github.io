@@ -764,91 +764,139 @@ Popping Stash
     Apply the stashed changes back to your working directory using git stash apply or git stash pop.
 
 Clearing Stash
+    
     Clear all stashed changes from the stack with git stash clear.
+
 Starting Github
+
     Create a GitHub account if you don't have one.
     Log in to your GitHub account to access its features and repositories.
+
 Creating a new repository on Github
+
     Click on the "New" button on GitHub to create a new repository.
     Provide a repository name, description, and other relevant information.
     Click "Create repository" to initialize the new repository.
+
 Connecting Remote Repository to Local Repository
+    
     Copy the repository URL from GitHub.
     In your local repository, run git remote add origin <repository_URL> to connect the local repository to the remote one on GitHub.
+
 Pushing local changes to remote repository
+
     Use git push origin master to push changes from the local repository to the remote repository on GitHub.
     The master branch is pushed by default, but you can change it to other branches if needed.
+
 What are branches?
+
     Branches in Git are separate lines of development. They allow you to work on features or fixes without affecting the main codebase.
+
 Use of branches
+
     Create branches using git branch <branch_name>.
     Switch to a branch with git checkout <branch_name> or git switch <branch_name>.
     Branches enable parallel development and help organize work efficiently.
+
 Making a new branch and switching to it (Learn Git Branching)
+
     Use git branch <branch_name> to create a new branch.
     Switch to the new branch with git checkout <branch_name> or git switch <branch_name>.
+
 Merging branch to main (Learn Git Branching)
+
     Merge branches with git merge <branch_name> while on the target branch (usually main).
     Merging combines changes from the specified branch into the current branch.
+
 Pushing new changes to master branch
+
     Commit changes in the branch.
     Switch to the main branch using git checkout main or git switch main.
     Merge the branch into main with git merge <branch_name>.
     Push changes to the remote repository using git push origin main.
+
 Working with Existing Projects
+
     Fork the existing repository on GitHub to create your copy.
     Clone your forked repository to your local machine using git clone <repository_URL>.
+
 Why Fork and How to Fork?
+
     Forking creates a personal copy of someone else's project, allowing you to make changes without affecting the original repository.
     Fork a repository on GitHub by clicking the "Fork" button on the repository's page.
+
 Cloning the forked project to local
+
     Use git clone <forked_repository_URL> to clone your forked repository to your local machine.
     Cloning provides a local working copy linked to your GitHub fork.
+
 What is Upstream and adding it to local
+
     Upstream refers to the original repository you forked from.
     Add the upstream repository as a remote using git remote add upstream <original_repository_URL>.
+
 What is a Pull Request?
+
     A pull request (PR) is a proposed change submitted by a user.
     It enables collaboration, allowing others to review and discuss changes before merging them into the main repository.
+
 Never commit on main branch & creating our first pull request
+   
     Create a new branch for your changes using git checkout -b <branch_name>.
     Make changes, stage them, commit, and push to your forked repository.
     Open a pull request on GitHub, comparing your branch to the original repository's main branch.
+
 Removing a commit from the pull request by force pushing to it
+
     If you need to remove a commit from your pull request, first use git log to identify the commit hash you want to remove.
     Use git rebase -i HEAD~n, where n is the number of commits before the one you want to remove. Change 'pick' to 'edit' for the commit you want to remove.
     Amend the commit or use git reset --soft HEAD^ to uncommit the changes, then make the necessary changes and commit again.
     Complete the rebase process with git rebase --continue.
     Force push your changes to the branch on GitHub using git push origin <branch_name> --force. Note that force pushing rewrites the branch history.
- Merging a Pull Request
+ 
+Merging a Pull Request
+
     Review the changes in the pull request, ensuring they meet the project's standards.
     Click the "Merge" button on the GitHub pull request page to merge the changes into the main repository.
     Choose the merge method (merge commit, squashing, or rebasing) based on the project's guidelines and click "Confirm merge.
+
 Making forked project even with the main project
+
     Add the original repository as an upstream remote using git remote add upstream <original_repository_URL>.
     Fetch changes from the upstream repository using git fetch upstream.
     Merge changes from the upstream's main branch into your local main branch using git merge upstream/main.
     Push the changes to your forked repository on GitHub using git push origin main.
+
 Instructions on how to try doing these on your own
+
     Encourage users to practice Git and GitHub commands on their own projects or sample repositories.
     Provide exercises and challenges to reinforce learning, such as creating branches, making commits, resolving merge conflicts, and submitting pull requests.
+
 Squashing commits
+
     Use git log to identify the commits you want to squash.
     Use git rebase -i HEAD~n, where n is the number of commits you want to squash.
     Change 'pick' to 'squash' for the commits you want to combine.
     Save and exit the editor, then provide a new commit message for the squashed commits.
     Complete the rebase process with git rebase --continue.
+
 Using the Rebase command
+
     Use git rebase <branch_name> to reapply changes from your current branch on top of the specified branch.
     Rebase helps integrate changes from one branch into another while maintaining a linear history.
+
 Using the hard flag to reset
+
     Use git reset --hard <commit_hash> to reset the branch to the specified commit.
     This operation discards all changes and commits after the specified commit, reverting the branch to that state.
+
 Merge conflicts and how to resolve them?
+
     Merge conflicts occur when Git cannot automatically merge changes from different branches.
     To resolve conflicts, identify conflicted files using git status.
     Edit the conflicted files to resolve conflicts manually.
     Use git add <conflicted_file> to mark the conflicts as resolved.
     Complete the merge process with git merge --continue or git commit if it's a merge commit.
     After resolving conflicts, remember to commit the changes.
+
 These step-by-step instructions provide a comprehensive overview of key Git and GitHub concepts, ensuring a solid understanding of version control, collaboration, and best practices for managing software development projects.
