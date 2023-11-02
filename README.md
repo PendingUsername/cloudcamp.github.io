@@ -690,48 +690,79 @@ Python + Flask deploy to Amazon Web Services Elastic Beanstalk (CI/CD with Git, 
  What is Git and Github?
  
     Git is a distributed version control system that tracks changes in source code during software development. It allows multiple developers to collaborate on projects, managing and tracking changes efficiently.
-    GitHub is a web-based hosting service for Git repositories. It provides a platform for version control, collaboration, and code management. GitHub enhances Git by adding features like pull requests, issue tracking, and          project management tools.
+    GitHub is a web-based hosting service for Git repositories. It provides a platform for version control, collaboration, and code management. GitHub enhances Git by adding features like pull requests, issue tracking, and project management tools.
+ 
  Why Git and Github?
+ 
     Git and GitHub are used for version control, enabling developers to collaborate, track changes, and manage codebases effectively.
     They ensure a backup of the code, enable parallel development through branches, and facilitate collaborative coding, making it easier to identify and resolve issues.
+ 
  Downloading Git
+ 
     Go to the official Git website.
     Download the appropriate version of Git for your operating system (Windows, macOS, Linux).
     Run the installer and follow the installation instructions.
+
 Structure of the Tutorial
+
     The tutorial is structured to cover Git and GitHub concepts step by step, starting from basic commands and progressing to advanced topics.
     It provides a hands-on approach, allowing users to learn through practical examples and exercises.
+
 Some basic Linux commands
+    
     Learn basic Linux commands such as cd (change directory), ls (list files), mkdir (make directory), and rm (remove files/directories). These commands are fundamental for navigating the terminal.
+
 Initializing a Git Repository
+
     Navigate to your project folder using the terminal.
     Run the command git init to initialize a Git repository in the selected directory.
+
 Making the first change
+
     Create or modify files within the Git repository using a text editor or command line.
     Use git status to check the changes made to the repository.
+
 Staging the first change
+
     Stage changes for commit using git add <filename> or git add . (to stage all changes).
     Verify the staged changes with git status.
+
 Committing the first change
+
     Commit the staged changes with git commit -m "Your commit message".
     Commits record changes to the repository along with descriptive messages.
+
 Adding data to files
+
     Continue editing files in your project, adding new data or modifying existing content.
+
 Removing changes from stage
+
     Use git reset <filename> to unstage changes and remove them from the staging area.
     The changes remain in your working directory but are not included in the next commit.
+
 Viewing the overall history of the project
+
     View the commit history using git log. This displays a chronological list of commits with commit messages, authors, and timestamps.
+
 Making few more commits
+
     Make additional changes to files and stage them.
     Commit the staged changes, creating multiple commits to track the project's progress.
+
 Removing a commit from the history of a project
+    
     To remove a specific commit, use commands like git revert or git reset.
     These commands allow you to undo changes introduced by a particular commit.
+
 Stashing changes
+    
     Use git stash to save changes without committing them. This is helpful when you need to switch branches or work on a different task without committing unfinished changes.
+
 Popping Stash
+
     Apply the stashed changes back to your working directory using git stash apply or git stash pop.
+
 Clearing Stash
     Clear all stashed changes from the stack with git stash clear.
 Starting Github
