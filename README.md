@@ -985,3 +985,43 @@ Cloud engineers play a pivotal role in managing complex cloud infrastructures. H
 
 
   Github Copilot:
+
+  GitHub Copilot is an AI-powered code completion tool developed by GitHub in collaboration with OpenAI. It is designed to assist developers in writing code by providing real-time suggestions and autocompletions directly within their code editor. GitHub Copilot uses machine learning algorithms to analyze the context of your code and generate relevant code snippets, comments, and documentation, making the development process faster and more efficient.
+
+Here's a simple guide on how to use GitHub Copilot:
+Prerequisites:
+
+   - Code Editor: GitHub Copilot is integrated into code editors such as Visual Studio Code.
+   - GitHub Account: You need a GitHub account to access and use GitHub Copilot.
+
+Steps to Use GitHub Copilot:
+
+    1. Install Visual Studio Code:
+    If you haven't already, install Visual Studio Code from the official website (https://code.visualstudio.com/).
+
+    2. Install GitHub Copilot Extension:
+    Open Visual Studio Code, go to the Extensions view by clicking on the square icon in the sidebar or pressing Ctrl+Shift+X. Search for "GitHub Copilot" in the Extensions marketplace and install it.
+
+    3. Sign in to GitHub:
+    If you're not already signed in, click on the GitHub icon in the sidebar to sign in with your GitHub account.
+
+    4. Open a New or Existing File:
+    Create a new file or open an existing one in Visual Studio Code where you want to write or modify code.
+
+    5. Start Typing Code:
+    Begin typing your code as you normally would. GitHub Copilot will automatically analyze your code and provide suggestions in real-time as you type.
+
+    6. Accept Suggestions:
+    GitHub Copilot will show suggestions in a pop-up window as you type. You can accept a suggestion by pressing Tab or Enter. If the suggestion is not correct or needs modification, you can edit it before accepting.
+
+    7. Review and Modify Suggestions:
+    GitHub Copilot may not always generate perfect code. Review the suggestions carefully and make sure they fit your requirements. You can modify the generated code if necessary.
+
+    8. Use Contextual Comments:
+    GitHub Copilot also generates comments based on the context of your code. These comments can be helpful in understanding the code's functionality. You can accept comments in the same way you accept code suggestions.
+
+    9. Submit Feedback:
+    If you encounter incorrect or problematic suggestions, you can help improve GitHub Copilot by providing feedback. You can submit feedback directly through the tool to help train the AI model.
+
+    10. Explore Documentation:
+    GitHub Copilot can also generate documentation comments. If you need help understanding a specific function or method, GitHub Copilot might generate documentation comments to explain it. You can explore these comments to learn more about the code you're working with.
