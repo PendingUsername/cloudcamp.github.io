@@ -236,7 +236,7 @@ SSL (Secure Sockets Layer) is a technology that secures the connection between a
 ![Two-Tier Architecture](images/Two_Tier.png)
 ![Three-Tier Architecture](images/Three_Tier.png)
 
-# Part 2: Python
+# Part 3: Python, Prompt Engineering, and Git
 
 1. What is python
 
@@ -1025,3 +1025,82 @@ Steps to Use GitHub Copilot:
 
     10. Explore Documentation:
     GitHub Copilot can also generate documentation comments. If you need help understanding a specific function or method, GitHub Copilot might generate documentation comments to explain it. You can explore these comments to learn more about the code you're working with.
+
+# Part 4: AWS and Cloud Resume Challenge
+
+Amazon Web Services (AWS) is a comprehensive and widely adopted cloud computing platform provided by Amazon.com. It offers a vast array of cloud services, including computing power, storage options, networking capabilities, databases, machine learning, analytics, security tools, and more. AWS enables businesses and individuals to access these services over the internet on a pay-as-you-go basis, allowing them to scale their resources up or down based on demand. By utilizing AWS, organizations can leverage powerful computing resources without the need to invest in and maintain physical servers, significantly reducing costs and increasing flexibility in deploying various applications and services. AWS has become a cornerstone in the cloud computing industry, serving millions of customers around the world and powering a wide range of applications, from simple websites to complex enterprise solutions.
+
+Is it advisable to go for an associate level certification. Pick one and take the exam. I took the AWS Solutions Architect exam: The AWS Certified Solutions Architect - Associate exam is a certification offered by Amazon Web Services (AWS) that validates an individual's expertise in designing distributed systems and architecting scalable, reliable, and cost-effective solutions on the AWS cloud platform. The exam assesses a candidate's ability to understand customer requirements, recommend appropriate AWS services and features, and create a well-architected infrastructure that meets business needs. It covers various aspects, including AWS services, network design, security, storage, and cost optimization. Passing the AWS Certified Solutions Architect - Associate exam demonstrates a strong understanding of cloud architecture best practices and can be a valuable credential for professionals working with AWS.
+
+Create some projects to display your understanding and skills of the platform: [The Cloud Resume Challenge](https://github.com/PendingUsername/AWS-Cloud-Resume) and [Wordpress site hosted on AWS, connected to an object storage bucket](https://aws.amazon.com/getting-started/hands-on/wordpress-object-storage/?ref=gsrchandson) 
+
+# Part 5: Terraform
+
+Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp. It allows developers and operators to define and provision infrastructure and resources in a declarative configuration language. Instead of manually setting up servers, networks, and other infrastructure components, Terraform enables users to describe their desired infrastructure in code, known as Terraform configuration files. These files define the resources, their configurations, and relationships, and Terraform interprets them to create, modify, or destroy the infrastructure in a predictable and automated manner.
+
+Use Cases for Terraform:
+
+    Provisioning and Managing Cloud Resources: Terraform is commonly used to provision and manage resources on cloud platforms like AWS, Azure, Google Cloud Platform, and others. It can create and configure virtual machines, networks, storage, load balancers, and various cloud services.
+
+    Multi-Cloud and Hybrid Cloud Deployments: Terraform allows organizations to manage infrastructure across multiple cloud providers or in hybrid cloud environments. This flexibility is valuable for companies that want to avoid vendor lock-in and maintain a presence across different cloud platforms.
+
+    Infrastructure Versioning and Collaboration: Terraform configurations are code, which means they can be version-controlled using tools like Git. This enables collaboration among team members, rollback to previous versions, and facilitates a code review process for infrastructure changes.
+
+    Automated Application Deployments: Terraform can be used in conjunction with other tools like Docker and Kubernetes to automate the deployment of applications and their underlying infrastructure. It ensures consistent environments for applications, making it easier to deploy and scale applications in various stages of development.
+
+    Immutable Infrastructure: Terraform supports the concept of immutable infrastructure, where instead of making changes to existing infrastructure, new infrastructure is created and replaced with every change. This approach enhances reliability, scalability, and security.
+
+    Disaster Recovery and Redundancy: Terraform can be used to create redundant and geographically distributed infrastructure setups, enhancing disaster recovery capabilities. By defining failover mechanisms and backup systems in Terraform configurations, organizations can ensure high availability of their applications and services.
+
+    Compliance and Security: Terraform configurations can be designed to meet specific security and compliance requirements. By defining security groups, access controls, and encryption settings in Terraform, organizations can enforce security policies across their infrastructure.
+
+    Network Infrastructure: Terraform can manage complex network topologies, including virtual private clouds, subnets, routing tables, firewalls, and VPN connections. This is particularly useful for enterprises with intricate network requirements.
+
+[TERRAFORM - AWS RDS WITH RDS DATABASE](https://github.com/PendingUsername/AWS-RDS-With-Terraform)
+[TERRAFORM 3 TIER ARCHITECTURE VPC AWS](https://github.com/PendingUsername/Terraform_3Tier_AWS_VPC)
+
+# Part 6: Docker
+
+Docker is a popular platform for developing, shipping, and running applications in containers. Containers are lightweight, portable, and self-sufficient units that encapsulate an application and its dependencies, allowing it to run reliably and consistently across different environments. Docker provides tools and a platform to automate the deployment and scaling of applications inside these containers.
+
+Use Cases for Docker:
+
+    Application Isolation: Docker allows applications to run in isolated environments, ensuring that they do not interfere with each other. This isolation enhances security and simplifies the deployment of multiple applications on the same host.
+
+    Microservices Architecture: Docker is widely used in microservices-based architectures, where applications are broken down into smaller, independent services. Each microservice can run in its own container, enabling easier development, deployment, scaling, and maintenance of complex applications.
+
+    Continuous Integration and Continuous Deployment (CI/CD): Docker containers can be used to create consistent environments for building, testing, and deploying applications. CI/CD pipelines often leverage Docker to ensure that the application behaves the same way in development, testing, and production environments.
+
+    DevOps Practices: Docker facilitates collaboration between development and operations teams. Developers can create Docker images containing their applications and dependencies, which can then be used by operations teams for deployment, ensuring consistency and reducing the "it works on my machine" problem.
+
+    Scalable and Resource-Efficient Deployments: Docker containers can be quickly deployed and scaled up or down based on demand. They are lightweight and share the host operating system's kernel, making them more resource-efficient than traditional virtual machines. This scalability is particularly beneficial for cloud-based and distributed applications.
+
+    Hybrid and Multi-Cloud Deployments: Docker containers provide consistency across different environments, making it easier to move applications between on-premises servers and various cloud providers. This portability simplifies hybrid and multi-cloud deployments, allowing organizations to leverage the best services from different providers.
+
+    Legacy Application Modernization: Docker enables organizations to containerize existing, monolithic applications without rewriting the entire codebase. This approach modernizes legacy applications, making them more manageable, scalable, and easier to integrate with modern technologies.
+
+    Data Science and Machine Learning: Docker is used in data science and machine learning workflows to create reproducible and shareable environments. Data scientists can package their models, algorithms, and dependencies in Docker containers, ensuring consistency across different environments and facilitating collaboration.
+
+    Internet of Things (IoT) Applications: Docker's lightweight nature makes it suitable for IoT devices with limited resources. Containers can be deployed on edge devices, enabling efficient and consistent application deployment in IoT scenarios.
+
+    Desktop Virtualization and Development Environments: Developers can use Docker to create isolated development environments that mirror production setups. This ensures that the development environment matches the production environment closely, reducing integration issues and improving the reliability of software releases. Additionally, Docker can be used for desktop virtualization, allowing users to run applications in isolated containers on their desktops.
+
+# Part 7: GitHub Actions
+
+GitHub Actions is an automation platform provided by GitHub, allowing developers to automate various workflows directly within their GitHub repositories. It enables you to build, test, and deploy your code without relying on external Continuous Integration (CI) or Continuous Deployment (CD) services. With GitHub Actions, you can automate tasks, create custom workflows, and respond to events within your repository, such as code pushes, pull requests, issues, and more.
+
+GitHub Actions workflows are defined in YAML files and can include multiple jobs and steps. Each step in a workflow can run commands, execute scripts, or utilize predefined actions from the GitHub Marketplace. Actions can be triggered by events, scheduled runs, or manual triggers, providing flexibility in setting up your automation pipelines.
+
+Continuous Integration (CI) and Continuous Deployment (CD):
+
+Continuous Integration (CI) is a software development practice where code changes are automatically built, tested, and integrated into a shared repository multiple times a day. CI aims to identify and fix integration issues early in the development process, ensuring that the codebase remains consistent and stable. When a developer pushes changes to the version control system, CI tools automatically trigger the build and test processes to validate the changes.
+
+Continuous Deployment (CD), an extension of Continuous Integration, is the practice of automatically deploying code changes to production or staging environments after passing automated tests. CD ensures that every code change that successfully passes the tests is automatically deployed, reducing the manual intervention required in the deployment process. This approach leads to faster and more reliable software releases, enabling organizations to deliver new features and fixes to users quickly.
+
+Combining CI and CD practices streamlines the software development lifecycle by automating the process of building, testing, and deploying applications. GitHub Actions allows you to implement both CI and CD workflows within your GitHub repository. For example, you can create a workflow that triggers on every push to the main branch (CI), runs tests, and then automatically deploys the application to a staging environment if the tests pass (CD). This automation ensures that changes are thoroughly validated and deployed to various environments with minimal manual intervention, improving development efficiency and software quality.
+
+These 2 projects are good examples utilizing Github Actions and CI/CD: (Cloud Resume Challenge)[https://github.com/PendingUsername/AWS-Cloud-Resume] and (Online Calculator)[https://github.com/PendingUsername/Ebs-Calc]
+
+
+
+
