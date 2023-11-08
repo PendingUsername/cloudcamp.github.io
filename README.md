@@ -1057,6 +1057,7 @@ Use Cases for Terraform:
     Network Infrastructure: Terraform can manage complex network topologies, including virtual private clouds, subnets, routing tables, firewalls, and VPN connections. This is particularly useful for enterprises with intricate network requirements.
 
 [TERRAFORM - AWS RDS WITH RDS DATABASE](https://github.com/PendingUsername/AWS-RDS-With-Terraform)
+
 [TERRAFORM 3 TIER ARCHITECTURE VPC AWS](https://github.com/PendingUsername/Terraform_3Tier_AWS_VPC)
 
 # Part 6: Docker
@@ -1099,7 +1100,8 @@ Continuous Deployment (CD), an extension of Continuous Integration, is the pract
 
 Combining CI and CD practices streamlines the software development lifecycle by automating the process of building, testing, and deploying applications. GitHub Actions allows you to implement both CI and CD workflows within your GitHub repository. For example, you can create a workflow that triggers on every push to the main branch (CI), runs tests, and then automatically deploys the application to a staging environment if the tests pass (CD). This automation ensures that changes are thoroughly validated and deployed to various environments with minimal manual intervention, improving development efficiency and software quality.
 
-These 2 projects are good examples utilizing Github Actions and CI/CD: (Cloud Resume Challenge)[https://github.com/PendingUsername/AWS-Cloud-Resume] and (Online Calculator)[https://github.com/PendingUsername/Ebs-Calc]
+These 2 projects are good examples utilizing Github Actions and CI/CD: [Cloud Resume Challenge](https://github.com/PendingUsername/AWS-Cloud-Resume) 
+[Online Calculator](https://github.com/PendingUsername/Ebs-Calc)
 
 
 
