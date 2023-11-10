@@ -163,6 +163,7 @@ else
 fi-
 - This script sets the AWS region and the desired resource group name, and then it uses the AWS CLI to create the resource group. It checks the exit status of the AWS CLI command to determine if the creation was successful and provides appropriate feedback.
 ```
+Here is a Bash project that utilizes a script to upload files to an S3 bucket: [CLI Uploader](https://github.com/PendingUsername/Bash-CLI-File-Uploader/tree/main) 
 # Part 2: Networking
 1. OSI (Open Systems Interconnection Reference) model is an overall guide for data flow, consisting of 7 layers:
 
