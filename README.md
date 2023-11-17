@@ -1033,7 +1033,7 @@ Amazon Web Services (AWS) is a comprehensive and widely adopted cloud computing 
 
 Is it advisable to go for an associate level certification. Pick one and take the exam. I took the AWS Solutions Architect exam: The AWS Certified Solutions Architect - Associate exam is a certification offered by Amazon Web Services (AWS) that validates an individual's expertise in designing distributed systems and architecting scalable, reliable, and cost-effective solutions on the AWS cloud platform. The exam assesses a candidate's ability to understand customer requirements, recommend appropriate AWS services and features, and create a well-architected infrastructure that meets business needs. It covers various aspects, including AWS services, network design, security, storage, and cost optimization. Passing the AWS Certified Solutions Architect - Associate exam demonstrates a strong understanding of cloud architecture best practices and can be a valuable credential for professionals working with AWS.
 
-Create some projects to display your understanding and skills of the platform: [The Cloud Resume Challenge](https://github.com/PendingUsername/AWS-Cloud-Resume) and [Wordpress site hosted on AWS, connected to an object storage bucket](https://aws.amazon.com/getting-started/hands-on/wordpress-object-storage/?ref=gsrchandson) 
+Create some projects to display your understanding and skills of the platform: [The Cloud Resume Challenge](https://github.com/PendingUsername/AWS-Cloud-Resume) and [Wordpress site hosted on AWS, connected to an object storage bucket](http://aphacker.com/) 
 
 # Part 5: Terraform
 
