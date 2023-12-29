@@ -1087,6 +1087,8 @@ Use Cases for Docker:
 
     Desktop Virtualization and Development Environments: Developers can use Docker to create isolated development environments that mirror production setups. This ensures that the development environment matches the production environment closely, reducing integration issues and improving the reliability of software releases. Additionally, Docker can be used for desktop virtualization, allowing users to run applications in isolated containers on their desktops.
 
+Example of a docker webapp on ECS: [Docker Webapp](https://github.com/PendingUsername/dockerapp)
+
 # Part 7: GitHub Actions
 
 GitHub Actions is an automation platform provided by GitHub, allowing developers to automate various workflows directly within their GitHub repositories. It enables you to build, test, and deploy your code without relying on external Continuous Integration (CI) or Continuous Deployment (CD) services. With GitHub Actions, you can automate tasks, create custom workflows, and respond to events within your repository, such as code pushes, pull requests, issues, and more.
